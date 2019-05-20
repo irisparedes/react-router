@@ -1,0 +1,51 @@
+body {
+  margin:0 0 0 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  background: purple;
+  height: 30px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item a {
+  color: white;
+  font-weight: bold;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+}
+
+.list-item {
+  list-style: none;
+  border: 2px solid grey;
+  background: lightgray;
+  width: 300px;
+  display: flex;
+  margin: 0 0 20px;
+  padding: 30px;
+}
+
+.link-container {
+  width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
