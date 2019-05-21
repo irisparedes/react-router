@@ -6,7 +6,9 @@ class PersonDetail extends React.Component {
     const {data, match} = this.props;
     return(
       <div className="cards">
-        {data.filter(item => item.login.username === match.params.id)
+      {data !== null 
+        ?
+        data.filter(item => item.login.username === match.params.id)
         .map(item => {
           return (
             <div className="info-card">
@@ -18,7 +20,9 @@ class PersonDetail extends React.Component {
             </div>
           )
         })
-        }
+        :
+        <p>ERROR</p>
+      }
       </div>
     );
   }

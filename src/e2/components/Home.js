@@ -6,18 +6,21 @@ class Home extends React.Component {
     const {data} = this.props;
     return(
       <div>
-      {data.map((item, index) =>
-        <li className="list-item" key={index}>
-          <Link to={`/PersonDetail/${item.login.username}`}>
-          <div className="link-container">
-            <h2 className="card_name">{item.name.first} {item.name.last}</h2>
-            <img src={item.picture.medium} alt={item.name.first}/>
-            {/* <h3 className="card_city">Ciudad: {item.location.city}</h3>
-            <h4 className="card_age">Edad: {item.dob.age}</h4> */}
-          </div>
-          </Link>
-        </li>
-      )}
+      {data !== null 
+        ?
+        data.map((item, index) =>
+          <li className="list-item" key={index}>
+            <Link to={`/PersonDetail/${item.login.username}`}>
+            <div className="link-container">
+              <h2 className="card_name">{item.name.first} {item.name.last}</h2>
+              <img src={item.picture.medium} alt={item.name.first}/>
+            </div>
+            </Link>
+          </li>
+            )
+        :
+        <p>ERROR</p>
+      }
       </div>
     )
   }

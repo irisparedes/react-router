@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import {fetchPeople} from './components/PeopleService';
+import {fetchPeople} from './services/PeopleService';
 import PersonDetail from './components/PersonDetail';
 import Home from './components/Home';
 import './App.css';
